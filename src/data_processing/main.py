@@ -203,6 +203,12 @@ def main():
         )
         print(f"Saving dataset to: {out_path}")
         final_trajectories.to_parquet(out_path, engine="fastparquet")
+
+        cfg_out_path = out_path.replace(".parquet", "_config.yaml")
+        with open(cfg_out_path, "w") as f:
+            yaml.dump(cfg, f, default_flow_style=False, sort_keys=False)
+        print(f"Config saved to: {cfg_out_path}")
+
         print("PIPELINE COMPLETE.")
 
     except Exception as e:
