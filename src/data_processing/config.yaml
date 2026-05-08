@@ -17,8 +17,9 @@ paths:
   # and where Phase 3 writes the final output file (output_filename).
   processed_dir: data/processed/
 
-  # Filename (inside processed_dir) for the final output Parquet dataset
-  output_filename: sepsis_trajectories_4h.parquet
+  # Filename (inside processed_dir) for the final output Parquet dataset and 
+  # the config used to create it (output_filename_config.yaml).
+  output_filename: sepsis_trajectories_4h
 
 
 # ------------------------------------------------------------------------------

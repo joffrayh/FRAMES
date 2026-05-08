@@ -274,6 +274,7 @@ The final dataset is saved to:
 
 ```
 data/processed/sepsis_trajectories_4h.parquet
+data/processed/sepsis_trajectories_4h_config.yaml  # config snapshot for this run
 ```
 
 Each row is one 4-hour timestep for one patient. Key columns:

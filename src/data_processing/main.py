@@ -199,7 +199,9 @@ def main():
         del ce_df, lab_df, mv_df, data_dict, cohort
 
         out_path = os.path.join(
-            cfg["paths"]["processed_dir"], cfg["paths"]["output_filename"]
+            cfg["paths"]["processed_dir"],
+            cfg["paths"]["output_filename"],
+            ".parquet"
         )
         print(f"Saving dataset to: {out_path}")
         final_trajectories.to_parquet(out_path, engine="fastparquet")
