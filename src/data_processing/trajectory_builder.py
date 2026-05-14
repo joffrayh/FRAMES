@@ -746,7 +746,9 @@ def build_trajectories(
 
     # 4. Integrate Missingness Features BEFORE Imputation
     init_traj = add_missingness_features(
-        init_traj, timestep_hours=config["timestep"]
+        init_traj,
+        lab_cols = config["missingness_features"],
+        timestep_hours=config["timestep"]
     )
     # 5. Imputation
     init_traj = handle_missing_values(

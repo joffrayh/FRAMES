@@ -291,9 +291,6 @@ def add_missingness_features(df, lab_cols=None, timestep_hours=4):
     """
     print("Calculating informative missingness features...")
 
-    if lab_cols is None:
-        lab_cols = ["lactate", "wbc", "creatinine", "platelets"]
-
     # Ensure correct ordering
     df = df.sort_values(["stay_id", "timestep"])
 

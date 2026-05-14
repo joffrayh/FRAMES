@@ -68,6 +68,9 @@ trajectories:
   cleaning_config_path: src/data_processing/clinical_reference/outlier_bounds.json
 
   # --- Imputation ---
+  # Columns for which to add missingness indicator features (0 = observed, 1 = missing).
+  missingness_features:  ["lactate", "wbc", "creatinine", "platelets"]
+
   # Columns with missingness fraction above this are dropped before KNN. Range: (0, 1].
   missing_threshold: 0.8
 
