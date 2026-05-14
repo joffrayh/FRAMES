@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 # ── Config: Data & Model ───────────────────────────────────────────────────────
-DATA_PATH   = "/home/joffray/repos/uni/dissertation/code/src/demo_ui/test_set_new2.parquet"
+DATA_PATH   = "/home/joffray/repos/uni/dissertation/code/src/demo_ui/test_set.parquet"
 MODEL_PATH  = "/home/joffray/repos/uni/dissertation/code/mlruns/5/models/m-6f94a3404987472a88730dccbc5fd81d/artifacts/"
 
 PATIENT_ID_COL     = "stay_id"
