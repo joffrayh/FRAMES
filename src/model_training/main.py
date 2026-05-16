@@ -93,8 +93,8 @@ def main():
         model_cfg = config["sequence"][active_model]
     else:
         print(
-            f"Model '{active_model}' not found in tabular or \
-               sequence config sections."
+            f"Model '{active_model}' not found in tabular or " +
+            "sequence config sections."
         )
         return
 
@@ -104,8 +104,8 @@ def main():
     print("\nSplitting data...")
     df_train, df_val, df_test = grouped_stratified_split(df, config)
     print(
-        f"Dataset split: \
-          Train ({len(df_train)}), Val ({len(df_val)}), Test ({len(df_test)})\n"
+        "Dataset split: " +
+        f"Train ({len(df_train)}), Val ({len(df_val)}), Test ({len(df_test)})\n"
     )
 
     # naming the experiment based on config settings
