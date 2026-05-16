@@ -11,7 +11,7 @@ system:
 
 data:
   path: "data/processed_files/patient_timeseries_with_features.parquet"
-  target_window: 3        # number of timesteps ahead to check for sepsis onset
+  target_window: 2        # number of timesteps ahead to check for sepsis onset
   target_horizon: 1       # how many timesteps ahead to start looking
   timestep_duration_hours: 4
 
@@ -22,7 +22,7 @@ data:
 
 tabular:
   feature_engineering:
-    use_lags: false         # adds lag features, e.g. heart_rate_lag1, heart_rate_lag2
+    use_lags: True         # adds lag features, e.g. heart_rate_lag1, heart_rate_lag2
     num_lags: 3
     lag_exclude_cols:       # columns skipped when generating lags (demographics, missingness indicators)
       - "gender"
@@ -37,7 +37,7 @@ tabular:
       - "creatinine_measured"
       - "platelets_measured"
 
-    use_rolling: false              # adds rolling mean/std/min/max features
+    use_rolling: True              # adds rolling mean/std/min/max features
     rolling_windows_hours: [8, 16]  # window sizes in hours
     rolling_exclude_cols:           # same exclusion logic as lag_exclude_cols
       - "gender"
