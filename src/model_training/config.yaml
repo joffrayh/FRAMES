@@ -10,7 +10,7 @@ system:
   device: "cpu"
 
 data:
-  path: "data/processed_files/patient_timeseries_with_features.parquet"
+  path: "data/processed/sepsis_trajectories_4h.parquet"
   target_window: 2        # number of timesteps ahead to check for sepsis onset
   target_horizon: 1       # how many timesteps ahead to start looking
   timestep_duration_hours: 4
@@ -19,6 +19,48 @@ data:
     train_frac: 0.70
     val_frac: 0.15
     test_frac: 0.15
+
+  columns: # columns to use for modelling, only these are kept
+    # identifiers and target  
+    - 'stay_id'
+    - 'timestep'
+    - 'sepsis'
+
+    # demographics
+    - 'age'                          
+    - 'gender'                       
+    - 'charlson_comorbidity_index'   
+    
+    # vitals
+    - 'heart_rate'                   
+    - 'map'                          
+    - 'respiratory_rate'             
+    - 'temp_C'                       
+    - 'spo2'
+    
+
+    # labs
+    - 'wbc'                          
+    - "hours_since_wbc"
+    - "wbc_measured"
+
+    - 'lactate'                      
+    - "hours_since_lactate"
+    - "lactate_measured"
+    
+    - 'creatinine'                   
+    - "hours_since_creatinine"
+    - "creatinine_measured"
+    
+    - 'platelets'  
+    - "hours_since_platelets"
+    - "platelets_measured"
+                  
+
+    # derived scores
+    - 'sirs_score'
+    - 'shock_index'
+
 
 tabular:
   feature_engineering:
