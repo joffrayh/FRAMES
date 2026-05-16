@@ -105,7 +105,8 @@ def main():
     df_train, df_val, df_test = grouped_stratified_split(df, config)
     print(
         "Dataset split: "
-        + f"Train ({len(df_train)}), Val ({len(df_val)}), Test ({len(df_test)})\n"
+        + f"Train ({len(df_train)}), Val ({len(df_val)}), "
+        + f"Test ({len(df_test)})\n"
     )
 
     # naming the experiment based on config settings
