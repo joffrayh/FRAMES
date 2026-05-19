@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![DOI](https://zenodo.org/badge/1159890080.svg)](https://doi.org/10.5281/zenodo.20043790)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20043791.svg)](https://doi.org/10.5281/zenodo.20043791)
 [![FAIR](https://img.shields.io/badge/FAIR-compliant-green.svg)](https://www.go-fair.org/fair-principles/)
 
 ---
@@ -115,3 +115,22 @@ Please follow the NumPy-style docstrings convention and ensure appropriate docum
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## How to Cite
+
+If you use FRAMES in your research, please cite using the following:
+
+```bibtex
+@software{joffrayh_2026_20043791,
+    author       = {joffrayh},
+    title        = {joffrayh/FRAMES: v0.1.0-alpha - fully implemented data pipeline.},
+    month        = may,
+    year         = 2026,
+    publisher    = {Zenodo},
+    version      = {v0.1.0-alpha},
+    doi          = {10.5281/zenodo.20043791},
+    url          = {https://doi.org/10.5281/zenodo.20043791},
+}
+```
